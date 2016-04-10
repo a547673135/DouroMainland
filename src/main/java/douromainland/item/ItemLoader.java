@@ -1,5 +1,8 @@
 package douromainland.item;
 
+import douromainland.item.test.ItemDecreaseSPCurrent;
+import douromainland.item.test.ItemIncreaseSPCurrent;
+import douromainland.item.test.ItemIncreaseSPMax;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -9,13 +12,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemLoader {
 	public static Item soulStone;
+	public static Item increaseSPMax;
+	public static Item increaseSPCurrent;
+	public static Item decreaseSPCurrent;
 
 	static {
 		soulStone = new ItemSoulStone();
+		increaseSPMax = new ItemIncreaseSPMax();
+		increaseSPCurrent = new ItemIncreaseSPCurrent();
+		decreaseSPCurrent = new ItemDecreaseSPCurrent();
 	}
 
 	public ItemLoader() {
 		GameRegistry.registerItem(soulStone, "soul_stone");
+		GameRegistry.registerItem(increaseSPMax, "increase_SP_max");
+		GameRegistry.registerItem(increaseSPCurrent, "increase_SP_current");
+		GameRegistry.registerItem(decreaseSPCurrent, "decrease_SP_current");
 	}
 
 	@SideOnly(Side.CLIENT)

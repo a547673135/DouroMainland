@@ -16,6 +16,7 @@ public class DouroMainlandMod {
 
 	@SidedProxy(clientSide = "douromainland.client.ClientProxy", serverSide = "douromainland.common.CommonProxy")
 	public static CommonProxy proxy;
+	
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
